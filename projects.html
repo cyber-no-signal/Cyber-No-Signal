@@ -3,38 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber No Signal Visit</title>
+  <title>Cyber No Signal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <canvas id="stars"></canvas>
   <button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">🌙</button>
+<div class="card">
+  <h1>Welcome to Cyber No Signal</h1>
+  <p>Веб-разработка и программирование. Создаю простые сайты и лендинги.</p>
+  <div class="video-wrapper">
+  <video id="promo-video" class="promo" controls muted playsinline autoplay loop>
+    <source src="promo.mp4" type="video/mp4">
+    Твой браузер не поддерживает видео.
+  </video>
+  <button id="unmute-btn" class="unmute-btn" aria-label="Включить звук">🔇 Включить звук</button>
+</div>
+    <h2>Проекты строются на:</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
 
-  <div class="card">
-    <a href="index.html" class="back">← На главную</a>
+    <a href="projects.html" class="btn">Проекты</a>
+    <a href="https://t.me/slowedsamurai" class="btn btn-outline">Связаться со мной</a>
+    <form action="https://formspree.io/f/meaeeqpl" method="POST" class="contact-form">
+  <label for="name">Ваше имя</label>
+  <input type="text" id="name" name="name" required placeholder="Как вас зовут?">
 
-    <h1>Проекты</h1>
-    <p>Здесь мои проекты. Пока их немного, но в развитии, добавляю новое.</p>
+  <label for="email">Электронную почту</label>
+  <input type="email" id="email" name="email" required placeholder="Ваш email">
 
-    <div class="projects">
-      <a href="https://cyber-no-signal.github.io/Cyber-No-Signal/" class="project" target="_blank">
-        <h3>Сайт-визитка</h3>
-        <p>Личная страница с описанием навыков и контактами</p>
-      </a>
+  <label for="message">Что вы по этому поводу думаете?</label>
+  <textarea id="message" name="message" required placeholder="Что вы хотите?" rows="4"></textarea>
 
-      <a href="#" class="project">
-        <h3>Cyber No Signal</h3>
-        <p>Одностраничный сайт для местной кофейни</p>
-      </a>
-
-      <a href="#" class="project">
-        <h3>Портфолио фотографа (скоро)</h3>
-        <p>Галерея работ с контактной формой</p>
-      </a>
-    </div>
-
-    <a href="https://t.me/slowedsamurai" class="btn">Связаться со мной</a>
-  </div>
-
+  <button type="submit" class="btn">Отправить</button>
+</form>
+</div>
   <script src="script.js"></script>
 </body>
 </html>
