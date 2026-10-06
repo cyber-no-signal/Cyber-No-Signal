@@ -16,3 +16,20 @@ toggleBtn.addEventListener('click', () => {
 function updateButton(theme) {
   toggleBtn.textContent = theme === 'light' ? '🌙' : '☀️';
 }
+// Автовоспроизведение + включение звука
+const video = document.getElementById('promo-video');
+const unmuteBtn = document.getElementById('unmute-btn');
+
+if (video && unmuteBtn) {
+  video.addEventListener('play', () => {
+    // Пробуем запустить со звуком через JS — сработает,
+    // если браузер разрешит (после взаимодействия)
+    video.muted = false;
+  }, { once: true });
+
+  unmuteBtn.addEventListener('click', () => {
+    video.muted = false;
+    video.volume = 1;
+    unmuteBtn.classList.add('hidden');
+  });
+}
